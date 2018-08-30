@@ -378,6 +378,10 @@ span {
           margin-top: 32px;
     }
 
+    #aboutMe {
+        max-width: unset;
+    }
+
     /* banner */
     h1 {
         font-size: 6em;
