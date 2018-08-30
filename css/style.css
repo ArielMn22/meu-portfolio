@@ -141,6 +141,10 @@
     align-items: center;
 }
 
+#stickerArea li {
+    margin-top: 30px;
+}
+
 .my-exp-date {
     width: 90%;
     border-bottom: 1px solid black;
