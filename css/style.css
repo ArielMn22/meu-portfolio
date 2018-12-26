@@ -17,9 +17,9 @@
 .top-bar {
     background-color:rgba(0, 0, 0, 0.5);
     width: 100%;
-    /* min-height: 56px; */
     height: 56px;
     position: fixed;
+    transition: all 0.3s;
     z-index: 1;
 }
 
@@ -78,6 +78,10 @@
     color: white;
     font-size: 1.5em;
     font-weight: 300;
+}
+
+.me {
+    text-align: center;
 }
 
 #MySkillsAndAboutMe {
@@ -155,8 +159,12 @@
     list-style-type: none;
 }
 
+.my-exp-date a {
+    transition: all 0.3s;
+}
+
 .my-exp-date a:hover {
-    box-shadow: 5px 5px 10px #ccc;
+    box-shadow: 4px 4px 4px #aaa;
     transition: all 0.3s;
 }
 
@@ -189,13 +197,13 @@
     font-size: 1.8em;
     color: white;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 .e-mail:hover {
     text-decoration: none;
     color: white;
     border-bottom: 2px solid white;
-    transition: all 0.3s;
     transform: scale(1.2);
  }
 
@@ -244,6 +252,7 @@
     padding: 86px 177px;
     margin-top: 20px;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px #ccc;
 }
 
 .bord-white {
@@ -256,6 +265,25 @@
 
 .bold {
     font-weight: 500;
+}
+
+/* Animations */
+
+@keyframes zoomOut {
+    0% {
+        filter: opacity(30%);
+        transform: scale(2);
+    }
+
+    100% {
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+}
+
+.zoom-out {
+    animation: zoomOut 2s;
+    /* animation-iteration-count: initial; */
 }
 
 /* Tipografia */
