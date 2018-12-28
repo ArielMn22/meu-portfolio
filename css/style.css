@@ -6,6 +6,16 @@
     font-family: 'Segoe UI';
 }
 
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-sided {
+    width: auto;
+    margin-left: 12vw;
+}
+
 #menuBotao {
     position: absolute;
     z-index: 2;
@@ -14,10 +24,11 @@
     font-size: 3em;
 }
 
-.top-bar {
-    background-color:rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 56px;
+.side-bar {
+    background-color:#141466;
+    border-right: 1px solid white;
+    width: 12vw;
+    height: 100vh;
     position: fixed;
     transition: all 0.3s;
     z-index: 1;
@@ -25,27 +36,49 @@
 
 #menuTopo {
     height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }
 
-.menu ul {
+.menu ul:not(.social-networks) {
     list-style-type: none;
     
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 100%;
 }
 
+.menu ul.social-networks {
+    display: flex;
+    width: 100%;
+}
+
 .menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: white;
     font-size: 1.5em;
-    padding: 14px 28px;
+    /* padding: 14px 28px; */
+    transition: all 0.3s;
 }
 
-.menu li:not(.redes-sociais) a:hover{
-    background-color: #2424BA;
+.menu li a > * {
+    margin: 0 10px;
+}
+
+.menu li {
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li:hover{
+    transform: scale(1.2);
 }
 
 .redes-sociais {
@@ -58,7 +91,7 @@
 
 .redes-sociais-item {
     height: 40px;
-    padding: 6px 23px;
+    /* padding: 6px 23px; */
     width: 40px;
 }
 
@@ -92,7 +125,8 @@
 
 #aboutMe {
     flex: 1;
-    background-color: #2424BA;
+    /* background-color: #2424BA; */
+        background-color: #262626;
 
     display: flex;
     flex-direction: column;
@@ -103,6 +137,13 @@
 #aboutMe p {
     font-size: 1.4em;
     color: white;
+}
+
+.my-photo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid black;
 }
 
 #mySkills {
@@ -210,24 +251,29 @@
 /* Backgrounds e estilizacao de botoes */
 .pinterest {
     background-image: url("../img/pinterest-icon.png");
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .pinterest-checkpoint {
+    background-size: cover;
     background-image: url("../img/checkpoint.jpg");
 }
 
 .github-hardtest {
+    background-size: contain;
     background-image: url("../img/hardtest.jpg");
 }
 
 .github {
     background-repeat: no-repeat;
     background-image: url("../img/github-icon.png");
+    background-size: contain;
 }
 
 .linkedin {
     background-repeat: no-repeat;
+    background-size: contain;
     background-image: url("../img/linkedin-icon.png");
 }
 
@@ -300,6 +346,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     font-size: 2em;
     font-weight: 400;
 }
@@ -397,8 +444,17 @@ span {
 
   @media screen and (max-width: 910px) {
 
+    body {
+        display: unset;
+        justify-content: unset;
+    }
+
+    .right-sided {
+        margin-left: unset;
+    }
+
     nav.escondido {
-        display: none;
+        display: none !important;
     }
     
     #menuBotao {
@@ -407,8 +463,9 @@ span {
         margin-right: 0.5em;
     }
 
-    .top-bar {
+    .side-bar {
         height: auto;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.75 );
     }
 
@@ -416,9 +473,9 @@ span {
           display: unset;
     }
 
-    .menu ul {
+    /* .menu ul {
           flex-direction: column;
-    }
+    } */
 
     .menu li {
           margin-top: 32px;
