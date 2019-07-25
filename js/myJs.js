@@ -76,7 +76,9 @@ $(function () {
 //     injectStyles(".sideBar {width: 3vw;}");
 // };
 
+
 $("#openCloseButton").click(function () {
+    $("#openCloseButton").toggleClass("rotate-button");
     $(".sideBar").toggleClass("retrair");
     $(".menu li a span").toggleClass("esconder");
     $(".right-sided").toggleClass("expandir");
