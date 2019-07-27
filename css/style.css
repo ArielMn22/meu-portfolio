@@ -276,7 +276,8 @@ body {
 }
 
 .github-hardtest {
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-image: url("../img/hardtest.jpg");
 }
 
@@ -631,7 +632,31 @@ span {
 }
 
 @media screen and (max-width: 500px) {
+  .img-link-img {
+    margin-bottom: 105px;
+  }
+  
+  .img-link-space {
+  flex-direction: column;
+  }
+
+  .my-exp-date {
+    width: 100%;
+  }
+
   /* banner */
+  .sticker-area {
+    padding: 40px 10px;
+  }
+  
+  .sticker-area ol {
+    padding: 40px 10px;
+  }
+
+  .img-link-text {
+    width: unset;
+  }
+
   h1 {
     font-size: 3.5em;
   }
