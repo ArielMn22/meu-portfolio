@@ -272,6 +272,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.ouref {
+  background-size: cover;
+  background-image: url("../img/ouref.png");
+}
+
+.astore {
+  background-size: cover;
+  background-image: url("../img/astore.png");
+}
+
 .pinterest-checkpoint {
   background-size: cover;
   background-image: url("../img/checkpoint.jpg");
@@ -370,6 +380,12 @@ body {
 
 .expandir {
   margin-left: 3vw !important;
+}
+
+.my-studies .blue-arrow {
+
+  background-color: #141466 !important;
+
 }
 
 /* Animations */
